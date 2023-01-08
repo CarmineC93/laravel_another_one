@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pokemons', function (Blueprint $table) {
+        Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
+            $table->smallInteger('number');
             $table->string('name');
             $table->string('type1');
             $table->string('type2');
@@ -26,7 +27,7 @@ return new class extends Migration
             $table->smallInteger('sp_def');
             $table->smallInteger('speed');
             $table->tinyInteger('generation');
-            $table->tinyInteger('legendary');
+            $table->string('legendary');
             $table->timestamps();
         });
     }
@@ -38,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pokemons');
+        Schema::dropIfExists('pokemon');
     }
 };
