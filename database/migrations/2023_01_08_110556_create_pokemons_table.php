@@ -27,7 +27,7 @@ return new class extends Migration
             $table->smallInteger('sp_def');
             $table->smallInteger('speed');
             $table->tinyInteger('generation');
-            $table->string('legendary');
+            $table->string('legendary'); //perchè non funziona con boolean() ??
             $table->timestamps();
         });
     }
