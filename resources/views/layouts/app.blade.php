@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-        @yield('title');
+        @yield('title')
     </title>
 
     <!-- Fonts -->
@@ -16,6 +16,6 @@
     @vite('resources/js/app.js')
 
 </head>
-@yield('content');
+@yield('content')
 
 </html>
