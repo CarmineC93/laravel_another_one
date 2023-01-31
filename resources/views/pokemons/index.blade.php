@@ -8,6 +8,11 @@
         <div class="text-end">
 
         </div>
+
+        <button class="btn btn-warning">
+            <a style="color:white; text-decoration:none" href="{{ url()->previous() }}">Torna indietro</a>
+        </button>
+
         <div class="row justify-content-center">
             <div class="col-8">
 
