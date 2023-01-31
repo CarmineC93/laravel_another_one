@@ -5,13 +5,25 @@
 @section('content')
 
     <div class="container bg-dark">
-        <div class="m-4">
-            <img class="d-block m-2" src="{{ Vite::asset('/resources/img/logo.png') }}" alt="pokedex">
+        <div class="row m-4">
+            <div class="col m-2">
+                <img style="max-width: 80px;" class="d-flex align-items-center"
+                    src="{{ Vite::asset('/resources/img/logo.png') }}" alt="pokedex">
+            </div>
 
             <a class="btn btn-light text-success my-2" href="{{ route('pokemons.index') }}">
-                POKEDEX
-                <img src="{{ Vite::asset('/resources/img/pokedex.png') }}" alt="pokedex">
+                Pokèdex
+                <img style="max-width: 200px; min-height: 150px" src="{{ Vite::asset('/resources/img/pokedex.png') }}"
+                    alt="pokedex">
             </a>
+
+
+            <a class="btn btn-light text-success my-2" href="{{ route('pokemons.show', $randomId) }}">
+                Test a Random Pokèmon
+                <img style="max-width: 200px; min-height: 150px" src="{{ Vite::asset('/resources/img/tallgrass.png') }}"
+                    alt="pokedex">
+            </a>
+
 
         </div>
     </div>

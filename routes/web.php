@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\PageController;
+use App\Models\Pokemon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $pokemons = Pokemon::all();
+
+    $allId = $pokemons->map(function ($pokemon) {
+        return collect($pokemon->toArray())
+            ->only(['id'])
+            ->all();
+    });
+
+    $randomPokemon = $allId->random();
+    $randomId = $randomPokemon['id'];
+    // dd($randomId);
+    return view('home', compact('pokemons', 'randomId'));
 });
 
-Route::get('/pokemons', [PageController::class, 'index'])
-    ->name('pokemons.index');
+Route::resource('/pokemons', PageController::class);
+
+
+// Route::get('/pokemons', [PageController::class, 'index'])
+//     ->name('pokemons.index');
+
+// Route::get('/pokemons', [PageController::class, 'show'])
+//     ->name('pokemons.index');

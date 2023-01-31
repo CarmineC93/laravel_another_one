@@ -48,7 +48,8 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $pokemon = Pokemon::findOrFail($id);
+        return view('pokemons.show', compact('pokemon'));
     }
 
     /**
