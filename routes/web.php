@@ -24,10 +24,10 @@ Route::get('/', function () {
             ->all();
     });
 
-    $randomPokemon = $allId->random();
-    $randomId = $randomPokemon['id'];
-    // dd($randomId);
-    return view('home', compact('pokemons', 'randomId'));
+    $onlyOneId = $allId->random()['id'];
+    // $randomId = $randomPokemon['id'];
+    // dd($onlyOneId);
+    return view('home', compact('pokemons', 'onlyOneId'));
 });
 
 Route::resource('/pokemons', PageController::class);

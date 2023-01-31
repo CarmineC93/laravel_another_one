@@ -18,7 +18,7 @@
             </a>
 
 
-            <a class="btn btn-light text-success my-2" href="{{ route('pokemons.show', $randomId) }}">
+            <a class="btn btn-light text-success my-2" href="{{ route('pokemons.show', $onlyOneId) }}">
                 Test a Random Pokèmon
                 <img style="max-width: 200px; min-height: 150px" src="{{ Vite::asset('/resources/img/tallgrass.png') }}"
                     alt="pokedex">

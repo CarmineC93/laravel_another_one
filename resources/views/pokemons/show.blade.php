@@ -8,6 +8,10 @@
             <div class="d-flex justify-content-around pt-3">
                 <h2>Name {{ $pokemon->name }}</h2>
 
+                <button class="btn btn-warning">
+                    <a style="color:white; text-decoration:none" href="{{ url()->previous() }}">Torna indietro</a>
+                </button>
+
                 <button class="btn btn-danger">
                     <a style="color:white; text-decoration:none" href="{{ route('pokemons.index') }}">Torna a tutti i
                         Pokèmon</a>
