@@ -1,1 +1,1 @@
-<img src="resources/img/pokemonApi.png" width="300">
+<img src="./resources/img/pokemonApi.PNG" width="300">
