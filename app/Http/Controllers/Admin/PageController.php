@@ -26,7 +26,8 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        $pokemons = Pokemon::all();
+        return view('pokemons.create', compact('pokemons'));
     }
 
     /**
