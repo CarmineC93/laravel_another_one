@@ -34,6 +34,7 @@ class PokemonsTableSeederCSV extends Seeder
                 $newPoke->speed = $pokemon[10];
                 $newPoke->generation = $pokemon[11];
                 $newPoke->legendary = $pokemon[12];
+                $newPoke->image = $pokemon[13];
                 $newPoke->save();
             }
         }

@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('legendary', function (Blueprint $table) {
-            //
+        Schema::table('pokemon', function (Blueprint $table) {
+            $table->string('image')->after('id')->nullable;
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('legendary', function (Blueprint $table) {
-            //
+        Schema::table('pokemon', function (Blueprint $table) {
+            $table->dropColumn('image');
         });
     }
 };
